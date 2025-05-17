@@ -23,6 +23,7 @@ export class UserService {
     // Salvar o usuário no banco de dados
     return this.userRepository.save({
       ...createUserDTO,
+      typeUser: 1,
       password: passwordHashed,
     });
 
